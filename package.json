@@ -1,0 +1,19 @@
+{
+  "name": "salus",
+  "version": "1.0.0",
+  "description": "project salus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilie134340/salus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emilie134340/salus/issues"
+  },
+  "homepage": "https://github.com/emilie134340/salus#readme"
+}
