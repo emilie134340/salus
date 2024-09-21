@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/emilie134340/salus/issues"
   },
-  "homepage": "https://github.com/emilie134340/salus#readme"
+  "homepage": "https://github.com/emilie134340/salus#readme",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
 }
