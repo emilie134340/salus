@@ -4,8 +4,7 @@
   "description": "project salus",
   "main": "index.js",
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
+    "dev": "nodemon server.js",
     "start": "node server.js"
   },
   "repository": {
@@ -19,19 +18,14 @@
   },
   "homepage": "https://github.com/emilie134340/salus#readme",
   "dependencies": {
+    "ejs": "^3.1.10",
     "express": "^4.21.0",
-    "express-openid-connect": "^2.17.1",
-    "helmet": "^8.0.0",
-    "morgan": "^1.10.0",
-    "next": "^14.2.13",
-    "ngrok": "^5.0.0-beta.2",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "express-ejs-layouts": "^2.5.1",
+    "express-openid-connect": "^2.17.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "dotenv": "^16.4.5",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.13"
+    "nodemon": "^3.1.7"
   }
 }
