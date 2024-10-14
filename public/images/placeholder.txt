@@ -1,1 +1,0 @@
-Used to send folder to GitHub, can be deleted when new items are added to folder.
