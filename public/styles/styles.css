@@ -1,0 +1,85 @@
+nav #web-nav {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: #007a7a;
+  color: #f5f5fa;
+  font-size: 2.5vw;
+}
+nav #web-nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 1rem;
+  margin: 0;
+}
+nav #web-nav ul li {
+  list-style: none;
+  padding: 0.5rem;
+}
+nav #web-nav ul li a {
+  color: #f5f5fa;
+}
+nav #web-nav #login {
+  font-size: 2.5vw;
+  padding: 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 0 5px #c7e9c0;
+  background-color: #a3d5f7;
+}
+nav #web-nav #login a {
+  color: #070700;
+}
+nav #mobile-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #007a7a;
+}
+nav #mobile-nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 90%;
+  padding: 1rem;
+}
+nav #mobile-nav ul li {
+  list-style: none;
+}
+nav #mobile-nav ul li a {
+  color: #f5f5fa;
+}
+
+@media screen and (min-width: 768px) {
+  nav #web-nav {
+    display: flex;
+  }
+  nav #mobile-nav {
+    display: none;
+  }
+}
+header {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+* a {
+  font-family: "Times New Roman", Times, serif;
+}
+
+#hero {
+  max-width: fit-content;
+}
+
+body {
+  padding-bottom: 4rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

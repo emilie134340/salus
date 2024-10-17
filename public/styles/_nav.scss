@@ -1,0 +1,84 @@
+@use "variables" as v;
+
+// set variables
+$white: v.$white;
+$black: v.$black;
+$teal: v.$teal;
+$blue: v.$blue;
+$green: v.$green;
+
+
+nav {
+    #web-nav {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        background-color: $teal;
+        color: $white;
+        font-size: 2.5vw;
+
+        ul {
+            display: flex;
+            flex-flow: row wrap;
+            padding: 1rem;
+            margin: 0;
+
+            li {
+                list-style: none;
+                padding: .5rem;
+
+                a {
+                    color: $white;
+                }
+            }
+        }
+
+        #login {
+            font-size: 2.5vw;
+            padding: .5rem;
+            border-radius: 6px;
+            box-shadow: 0 0 5px $green;
+            background-color: $blue;
+
+            a {
+                color: $black;
+            }
+        }
+    }
+
+    #mobile-nav {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: $teal;
+
+        ul {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            width: 90%;
+            padding: 1rem;
+
+            li {
+                list-style: none;
+
+                a {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        #web-nav {
+            display: flex;
+        }
+
+        #mobile-nav {
+            display: none;
+        }
+    }
+}
