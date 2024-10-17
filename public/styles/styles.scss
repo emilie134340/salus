@@ -1,0 +1,21 @@
+@use "variables";
+@use "nav";
+@use "header";
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+    a {
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
+
+#hero {
+    max-width: fit-content;
+}
+
+body {
+    padding-bottom: 4rem;
+}
