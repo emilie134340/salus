@@ -1,0 +1,16 @@
+@use "variables" as v;
+
+$white: v.$white;
+$black: v.$black;
+$teal: v.$teal;
+$blue: v.$blue;
+$green: v.$green;
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $teal;
+    color: $white;
+    margin-bottom: 1rem;
+}
