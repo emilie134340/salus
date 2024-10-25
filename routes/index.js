@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const baseController = require('../controllers/baseController');
 
-router.get('/about', baseController.about); // For About
-router.get('/about/privacy', baseController.privacy); // For Privacy Policy
+router.use('/users', require('./users'));
+
+router.get('/', baseController.index); // For Home
 
 module.exports = router;
