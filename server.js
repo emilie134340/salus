@@ -15,7 +15,6 @@ app.set('layout', './layouts/layout'); // Set layout to layout.ejs
 
 //Routes
 app.use(static); // Static route
-app.use('/about', require('./routes/viewsRoutes'));
 
 // Define port and host
 const port = process.env.PORT || 3000;
