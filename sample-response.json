@@ -1,0 +1,91 @@
+{
+    "userId": "auth0|abc123",
+    "firstName": "Jane",
+    "dashboard": {
+      "motivation": "To build a fulfilling life without dependencies",
+      "goals": "Achieve a stable job and reconnect with family",
+      "challenges": "Difficulty managing stress and anxiety",
+      "consequencesOfAccomplishing": "Sense of freedom and improved relationships",
+      "consequencesOfNotAccomplishing": "Risk of relapse and strained family ties",
+      "values": "Resilience, family, health"
+    },
+    "recoveryWheel": {
+      "occupational": [
+        { "rating": 3 }, { "rating": 2 }, { "rating": 4 }, { "rating": 1 },
+        { "rating": 3 }, { "rating": 2 }, { "rating": 3 }, { "rating": 4 }
+      ],
+      "physical": [
+        { "rating": 4 }, { "rating": 3 }, { "rating": 2 }, { "rating": 4 },
+        { "rating": 3 }, { "rating": 2 }, { "rating": 4 }, { "rating": 3 }
+      ],
+      "financial": [
+        { "rating": 2 }, { "rating": 1 }, { "rating": 2 }, { "rating": 2 },
+        { "rating": 3 }, { "rating": 1 }, { "rating": 2 }, { "rating": 3 }
+      ],
+      "intellectual": [
+        { "rating": 3 }, { "rating": 2 }, { "rating": 3 }, { "rating": 4 },
+        { "rating": 4 }, { "rating": 3 }, { "rating": 2 }, { "rating": 4 }
+      ],
+      "emotional": [
+        { "rating": 4 }, { "rating": 3 }, { "rating": 3 }, { "rating": 4 },
+        { "rating": 2 }, { "rating": 4 }, { "rating": 3 }, { "rating": 4 }
+      ],
+      "social": [
+        { "rating": 2 }, { "rating": 2 }, { "rating": 3 }, { "rating": 1 },
+        { "rating": 3 }, { "rating": 2 }, { "rating": 3 }, { "rating": 1 }
+      ],
+      "spiritual": [
+        { "rating": 4 }, { "rating": 3 }, { "rating": 2 }, { "rating": 4 },
+        { "rating": 3 }, { "rating": 4 }, { "rating": 4 }, { "rating": 4 }
+      ],
+      "environmental": [
+        { "rating": 2 }, { "rating": 1 }, { "rating": 3 }, { "rating": 2 },
+        { "rating": 4 }, { "rating": 3 }, { "rating": 1 }, { "rating": 2 }
+      ]
+    },
+    "recoveryToolbox": {
+      "occupational": "Seek opportunities for skill development in chosen career",
+      "physical": "Incorporate a 30-minute workout routine daily",
+      "financial": "Build an emergency fund covering three months of expenses",
+      "intellectual": "Read a new book monthly to expand knowledge",
+      "emotional": "Practice mindfulness to reduce stress and manage emotions",
+      "social": "Reconnect with friends and family weekly",
+      "spiritual": "Meditate daily for 10 minutes to stay centered",
+      "environmental": "Maintain a clean and organized living space"
+    },
+    "hotSpots": {
+      "social": {
+        "triggers": ["Certain friends who drink"],
+        "response": "Plan to engage in sober activities with different friends"
+      },
+      "places": {
+        "triggers": ["Old neighborhood bar", "concert venues"],
+        "response": "Avoid these places initially; attend events with a support group"
+      },
+      "things": {
+        "triggers": ["Alcohol bottles in social gatherings"],
+        "response": "Politely avoid gatherings with alcohol initially"
+      },
+      "feelings": {
+        "triggers": ["Loneliness", "stress"],
+        "response": "Practice mindfulness and reach out to support network when feeling down"
+      },
+      "financial": {
+        "triggers": ["Unplanned expenses"],
+        "response": "Keep a small emergency fund for unexpected expenses"
+      },
+      "spiritual": {
+        "triggers": ["Loss of hope"],
+        "response": "Reconnect with spiritual practices to find purpose"
+      },
+      "environmental": {
+        "triggers": ["Messy apartment"],
+        "response": "Establish a cleaning routine for a peaceful environment"
+      },
+      "intellectualOccupational": {
+        "triggers": ["Overwhelming workload"],
+        "response": "Prioritize tasks and take breaks when needed"
+      }
+    }
+  }
+  
