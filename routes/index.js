@@ -4,6 +4,7 @@ const baseController = require('../controllers/baseController');
 
 router.use('/users', require('./users'));
 router.use('/about', require('./about')); // Routes for different views
+router.use('/dashboard', require('./dashboard'));
 
 router.get('/', baseController.index); // For Home
 
