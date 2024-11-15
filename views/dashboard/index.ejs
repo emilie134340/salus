@@ -1,0 +1,16 @@
+<main id="dashboard_main">
+
+    <% if (title) {%>
+        <h1>
+            <%= title %>
+        </h1>
+        <div id="dashboard__content">
+            <%- include('../partials/circle') %>
+
+                <section id="dashboard__plan">
+                    <%- include('../partials/plan') %>
+                </section>
+        </div>
+        <% } else { res.redirect('/'); } %>
+
+</main>

@@ -8,6 +8,7 @@ dotenv.config();
 
 router.use('/users', require('./users'));
 router.use('/about', require('./about')); // Routes for different views
+router.use('/dashboard', require('./dashboard'));
 router.use('/newUser', require('./newUser')); 
 
 router.get('/', baseController.index); // For Home
