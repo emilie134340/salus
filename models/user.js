@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-  userId: { 
+  _id: { 
     type: String, 
     unique: true, 
     required: true 
@@ -11,12 +11,12 @@ const userSchema = new mongoose.Schema({
     required: true 
   },
   dashboard: {
-    motivation: { type: String, required: true },
-    goals: { type: String, required: true },
-    challenges: { type: String, required: true },
-    consequencesOfAccomplishing: { type: String, required: true },
-    consequencesOfNotAccomplishing: { type: String, required: true },
-    values: { type: String, required: true }
+    motivation: { type: String },
+    goals: { type: String },
+    challenges: { type: String },
+    consequencesOfAccomplishing: { type: String },
+    consequencesOfNotAccomplishing: { type: String },
+    values: { type: String }
   },
   recoveryWheel: {
     occupational: [{ rating: { type: Number, min: 1, max: 4 } }],
@@ -73,3 +73,10 @@ const userSchema = new mongoose.Schema({
     }
   }
 }, { timestamps: true });
+
+// await User.create({
+//   _id: "auth0|672eaa0827f4220aa4a80156", // get from auth0??? how?
+//   firstName: "GET FROM GMAIL????? has option given_name"
+// });
+const newUser = mongoose.model('newUser', userSchema);
+module.exports = newUser;
