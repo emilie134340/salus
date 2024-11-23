@@ -152,31 +152,26 @@ svg.selectAll(".topic-label")
 };
 
 Util.buildPlan = async () => {
-    let planList = await new Promise(resolve => {
-        setTimeout(() => {
-            resolve([{
-                'title': 'Will get from Plan DB Collection',
-                'content': 'Will get from Plan DB Collection',
-            },
-            {
-                'title': 'Will get from Plan DB Collection',
-                'content': 'Will get from Plan DB Collection',
-            }
-            ]);
-        }, 100);
-    });
+    let planList = await contentModel.getPlan();
 
     let planHTML = '';
 
     planList.forEach(plan => {
-        planHTML += `
-        <div class="plan">
-            <h2>${plan.title}</h2>
-            <div class="plan__content">
-                <p>${plan.content}</>
-            </div>  
+        if (plan.type == 'goals') {
+            planHTML += `
+        <div class="plan_${plan.type}">
+            <h3>${plan.title}</h3>
+            <p>${plan.content}</p>
         </div>
         `
+        } else {
+            planHTML += `
+        <div class="plan_${plan.type}">
+            <h4>${plan.title}</h4>
+            <p>${plan.content}</p>
+        </div>
+        `
+        }
     });
 
     return planHTML;
@@ -198,7 +193,7 @@ Util.handleErrors = fn => (req, res, next) => Promise.resolve(fn(req, res, next)
 //     clientID: process.env.CLIENT_ID,
 //     issuerBaseURL: process.env.ISSUER_BASE_URL
 //   };
-  
+
 // // auth router attaches /login, /logout, and /callback routes to the baseURL
 // Util.use(auth(config));
 

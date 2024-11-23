@@ -1,0 +1,240 @@
+@use "variables" as *;
+
+body:has(.form:target) {
+    position: fixed;
+    width: 100%;
+}
+
+#dashboard_main {
+    overscroll-behavior: contain;
+
+    #dashboard__circle {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        max-width: 700px;
+        margin: 1rem auto;
+
+        h2 {
+            text-align: center;
+            grid-column: 1 / span 1;
+        }
+
+        #change-circle-responses {
+            grid-column: span 1 / -1;
+            align-self: center;
+            justify-self: center;
+            padding: .25rem;
+            font-size: .75rem;
+            border-radius: 5px;
+            background-color: $blue;
+            color: $black;
+            border: 2px solid $black;
+            text-decoration: none;
+        }
+
+        #radialChart {
+            grid-column: 1 / -1;
+            align-self: center;
+        }
+    }
+
+    #dashboard__plan {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        max-width: 1000px;
+        margin: 1rem auto;
+        background-color: $green;
+        color: $black;
+        padding: 1rem;
+        border-radius: 6px;
+
+        h2 {
+            text-align: center;
+            grid-column: 1 / span 1;
+        }
+
+        #change-plan-responses {
+            grid-column: span 1 / -1;
+            align-self: center;
+            justify-self: center;
+            padding: .25rem;
+            font-size: .75rem;
+            border: 2px solid $black;
+            border-radius: 5px;
+            background-color: $blue;
+            color: $black;
+            text-decoration: none;
+        }
+
+        .plan_goals,
+        .plan_values {
+            grid-column: 1 / -1;
+
+            @media screen and (min-width: 768px) {
+                text-align: center;
+            }
+        }
+
+        div {
+            grid-column: span 2;
+            align-self: center;
+            border: 2px solid $black;
+            padding: 1rem;
+            margin: .5rem;
+            background-color: $teal;
+            color: $white;
+            border-radius: 6px;
+
+            * {
+                padding: .25rem;
+            }
+
+            li {
+                list-style: none;
+            }
+        }
+    }
+
+
+}
+
+aside {
+    position: relative;
+}
+
+aside:has(.form:target)::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+}
+
+.form {
+    &#circle__form {
+
+        section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 1rem;
+            margin: 1rem;
+            background-color: $blue;
+            border-radius: 6px;
+
+            label {
+                grid-column: 1 / span 1;
+                margin: 1rem;
+                font-size: 1rem;
+                align-self: start;
+            }
+
+            select {
+                margin: 1rem auto;
+                grid-column: span 1 / -1;
+                border-radius: 6px;
+                padding: .5rem;
+                background-color: $green;
+                width: 100%;
+
+                option:nth-of-type(even) {
+                    background-color: $teal;
+                    color: $white;
+                }
+
+                :hover {
+                    background-color: $blue;
+                    color: $black;
+                }
+
+            }
+        }
+
+        div {
+            margin: 1rem auto;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            color: $black;
+        }
+    }
+
+    &#plan__form {
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-radius: 6px;
+
+            label {
+                grid-column: 1 / span 1;
+                margin: 1rem;
+                align-self: start;
+                background-color: $blue;
+                border-radius: 6px;
+                padding: .5rem;
+            }
+
+            textarea {
+                margin: 1rem auto;
+                grid-column: span 1 / -1;
+                border-radius: 6px;
+                background-color: $teal;
+                color: $white;
+                font-size: 1rem;
+                width: 100%;
+                height: 50%;
+                resize: none;
+            }
+
+            .form__button {
+                padding: .5rem;
+                grid-column: span 1;
+                margin: 1rem auto;
+            }
+
+        }
+    }
+
+    &#circle__form,
+    &#plan__form {
+        display: none;
+        width: 90%;
+        max-width: 750px;
+        margin: 0 auto;
+        padding: 1rem;
+        background-color: $green;
+        border-radius: 6px;
+        color: $black;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto;
+        height: 95%;
+    }
+
+    &#circle__form:target,
+    &#plan__form:target {
+        display: block;
+    }
+
+}
+
+*.form__button {
+    padding: .5rem;
+    border: 2px solid $black;
+    border-radius: 6px;
+    background-color: $blue;
+    color: $black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+*.form__button:hover {
+    background-color: $teal;
+    color: $white;
+}

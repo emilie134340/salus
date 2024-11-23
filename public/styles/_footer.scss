@@ -12,5 +12,11 @@ footer {
     align-items: center;
     background-color: $teal;
     color: $white;
-    margin-bottom: 1rem;
+    padding: .5rem;
+    margin-bottom: 3.28rem;
+
+    @media screen and (min-width: 768px) {
+        margin: 0;
+    }
+
 }

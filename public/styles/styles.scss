@@ -1,7 +1,8 @@
 @use "variables";
-@use "nav";
 @use "header";
 @use "about";
+@use "nav";
+@use "dash";
 @use "footer";
 
 
@@ -16,8 +17,4 @@
 
 #hero {
     max-width: fit-content;
-}
-
-body {
-    padding-bottom: 4rem;
 }

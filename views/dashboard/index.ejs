@@ -7,10 +7,670 @@
         <div id="dashboard__content">
             <%- include('../partials/circle') %>
 
-                <section id="dashboard__plan">
-                    <%- include('../partials/plan') %>
-                </section>
+                <%- include('../partials/plan') %>
         </div>
+
         <% } else { res.redirect('/'); } %>
 
 </main>
+<aside>
+    <div class="form" id="circle__form">
+        <div>
+            <h2>Update Recovery Circle</h2>
+            <a href="#" id="cancel-circle-form" class="form__button"><b>X</b></a>
+        </div>
+        <form action="/dashboard/circle" method="put">
+            <input type="hidden" name="_uid" id="user_id" value="user_id">
+            <section>
+                <h3>Occupational</h3>
+                <label for="occupational-q1">1. I feel purpose in what I do.</label>
+                <select required name="occupational-q1" id="occupational-q1">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="occupational-q2">2. I maintain healthy boundries for myself at work.</label>
+                <select required name="occupational-q2" id="occupational-q2">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="occupational-q3">3. My work is motivating and interesting.</label>
+                <select required name="occupational-q3" id="occupational-q3">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="occupational-q4">4. I am able to disconnect from work when I am not there.</label>
+                <select required name="occupational-q4" id="occupational-q4">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="occupational-q5">5. I am able to disconnect from work when I am not there.</label>
+                <select required name="occupational-q5" id="occupational-q5">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="occupational-q6">6. I am able to disconnect from work when I am not there.</label>
+                <select required name="occupational-q6" id="occupational-q6">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="occupational-q7">7. I am able to disconnect from work when I am not there.</label>
+                <select required name="occupational-q7" id="occupational-q7">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="occupational-q8">4. I am able to disconnect from work when I am not there.</label>
+                <select required name="occupational-q8" id="occupational-q8">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+            </section>
+            <section>
+                <h3>Physical</h3>
+
+                <label for="physical-q1">1. I eat a balanced, nutritious diet.</label>
+                <select required name="physical-q1" id="physical-q1">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="physical-q2">2. I take responsibility for my physical health.</label>
+                <select required name="physical-q2" id="physical-q2">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="physical-q3">3. I feel well rested and get enough sleep.</label>
+                <select required name="physical-q3" id="physical-q3">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="physical-q4">4. I am generally free from illness.</label>
+                <select required name="physical-q4" id="physical-q4">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="physical-q5">5. I exercise at least three times a week.</label>
+                <select required name="physical-q5" id="physical-q5">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="physical-q6">6. I have annual check-ups and medical checks as prescribed.</label>
+                <select required name="physical-q6" id="physical-q6">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="physical-q7">7. I abstain from tobacco and nicotine products.</label>
+                <select required name="physical-q7" id="physical-q7">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="physical-q8">8. I abstain from alcohol and used prescribed drugs responsibly and
+                    moderately.</label>
+                <select required name="physical-q8" id="physical-q8">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+            </section>
+
+            <section>
+                <h3>Financial</h3>
+
+                <label for="financial-q1">1. I live within my means and take responsibility for my financial
+                    decisions.</label>
+                <select required name="financial-q1" id="financial-q1">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="financial-q2">2. My spending and saving habits reflect my values and
+                    beliefs.</label>
+                <select required name="financial-q2" id="financial-q2">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="financial-q3">3. I actively plan for periods when I may not have income.</label>
+                <select required name="financial-q3" id="financial-q3">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="financial-q4">4. I pay bills on time and positively manage credit.</label>
+                <select required name="financial-q4" id="financial-q4">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="financial-q5">5. I balance present-day spending with saving for the future.</label>
+                <select required name="financial-q5" id="financial-q5">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="financial-q6">6. I have similar financial beliefs and practices as those with whom I
+                    am close.</label>
+                <select required name="financial-q6" id="financial-q6">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="financial-q7">7. I have similar financial beliefs and practices as those with whom I
+                    am close.</label>
+                <select required name="financial-q7" id="financial-q7">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="financial-q8">8. I have similar financial beliefs and practices as those with whom I
+                    am close.</label>
+                <select required name="financial-q8" id="financial-q8">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+            </section>
+
+            <section>
+                <h3>Intellectual</h3>
+
+                <label for="intellectual-q1">1. I enjoy learning new skills and information.</label>
+                <select required name="intellectual-q1" id="intellectual-q1">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="intellectual-q2">2. I have positive thoughts (low degree of negativity and
+                    cynicism).</label>
+                <select required name="intellectual-q2" id="intellectual-q2">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="intellectual-q3">3. I am generally satisfied with my vocation/major.</label>
+                <select required name="intellectual-q3" id="intellectual-q3">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="intellectual-q4">4. I commit time and energy to professional growth and
+                    self-development.</label>
+                <select required name="intellectual-q4" id="intellectual-q4">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="intellectual-q5">5. My work is stimulating, rewards, and reflects my values.</label>
+                <select required name="intellectual-q5" id="intellectual-q5">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="intellectual-q6">6. I pursue mentally stimulating interests and hobbies.</label>
+                <select required name="intellectual-q6" id="intellectual-q6">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="intellectual-q7">7. I pursue mentally stimulating interests and hobbies.</label>
+                <select required name="intellectual-q7" id="intellectual-q7">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="intellectual-q8">8. I pursue mentally stimulating interests and hobbies.</label>
+                <select required name="intellectual-q8" id="intellectual-q8">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+            </section>
+
+            <section>
+                <h3>Emotional</h3>
+
+                <label for="emotional-q1">1. I have a sense of control in my life and am able to adapt to
+                    change.</label>
+                <select required name="emotional-q1" id="emotional-q1">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="emotional-q2">2. I perceive “problems” as opportunities for growth.</label>
+                <select required name="emotional-q2" id="emotional-q2">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="emotional-q3">3. I am able to comfort or console myself when I am troubled.</label>
+                <select required name="emotional-q3" id="emotional-q3">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="emotional-q4">4. I have a sense of fun and can laugh at myself.</label>
+                <select required name="emotional-q4" id="emotional-q4">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="emotional-q5">5. Others would describe me as emotionally stable.</label>
+                <select required name="emotional-q5" id="emotional-q5">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="emotional-q6">6. I believe I am responsible for my feelings and how I express
+                    them.</label>
+                <select required name="emotional-q6" id="emotional-q6">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="emotional-q7">7. I believe I am responsible for my feelings and how I express
+                    them.</label>
+                <select required name="emotional-q7" id="emotional-q7">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="emotional-q8">8. I believe I am responsible for my feelings and how I express
+                    them.</label>
+                <select required name="emotional-q8" id="emotional-q8">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+            </section>
+
+            <section>
+                <h3>Social</h3>
+
+                <label for="social-q1">1. I have at least three people with whom I have a close, trusting
+                    relationship.</label>
+                <select required name="social-q1" id="social-q1">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="social-q2">2. I am able to manage conflicts in all areas of my life.</label>
+                <select required name="social-q2" id="social-q2">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="social-q3">3. I have satisfying social interactions with others.</label>
+                <select required name="social-q3" id="social-q3">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="social-q4">4. I am aware and able to set and respect my own and others’
+                    boundaries.</label>
+                <select required name="social-q4" id="social-q4">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="social-q5">5. I am aware of the feelings of others and can respond
+                    appropriately.</label>
+                <select required name="social-q5" id="social-q5">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="social-q6">6. I have a sense of belonging to a group or with organizations.</label>
+                <select required name="social-q6" id="social-q6">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="social-q7">7. I have a sense of belonging to a group or with organizations.</label>
+                <select required name="social-q7" id="social-q7">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="social-q8">8. I have a sense of belonging to a group or with organizations.</label>
+                <select required name="social-q8" id="social-q8">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+            </section>
+
+            <section>
+                <h3>Spiritual</h3>
+
+                <label for="spiritual-q1">1. I have a sense of meaning and purpose in my life.</label>
+                <select required name="spiritual-q1" id="spiritual-q1">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="spiritual-q2">2. I have a general sense of serenity.</label>
+                <select required name="spiritual-q2" id="spiritual-q2">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="spiritual-q3">3. I am happy with the beliefs I hold.</label>
+                <select required name="spiritual-q3" id="spiritual-q3">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="spiritual-q4">4. I practice prayer, meditation, or engage in some type of reflective
+                    growth.</label>
+                <select required name="spiritual-q4" id="spiritual-q4">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="spiritual-q5">5. Principles/ethics/morals provide guides for my life.</label>
+                <select required name="spiritual-q5" id="spiritual-q5">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="spiritual-q6">6. I trust others and am able to forgive others and myself.</label>
+                <select required name="spiritual-q6" id="spiritual-q6">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="spiritual-q7">7. I trust others and am able to forgive others and myself.</label>
+                <select required name="spiritual-q7" id="spiritual-q7">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="spiritual-q8">8. I trust others and am able to forgive others and myself.</label>
+                <select required name="spiritual-q8" id="spiritual-q8">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+            </section>
+
+            <section>
+                <h3>Environmental</h3>
+
+                <label for="environmental-q1">1. I feel safe in my home.</label>
+                <select required name="environmental-q1" id="environmental-q1">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="environmental-q2">2. My needs for food, shelter, and clothing are adequately and
+                    consistently met.</label>
+                <select required name="environmental-q2" id="environmental-q2">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="environmental-q3">3. My spaces (home, car, office, etc.) are tidy and clean.</label>
+                <select required name="environmental-q3" id="environmental-q3">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="environmental-q4">4. My home is well-maintained and free from hazards.</label>
+                <select required name="environmental-q4" id="environmental-q4">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="environmental-q5">5. My home is well-maintained and free from hazards.</label>
+                <select required name="environmental-q5" id="environmental-q5">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="environmental-q6">6. My home is well-maintained and free from hazards.</label>
+                <select required name="environmental-q6" id="environmental-q6">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="environmental-q7">7. My home is well-maintained and free from hazards.</label>
+                <select required name="environmental-q7" id="environmental-q7">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+
+                <label for="environmental-q8">8. My home is well-maintained and free from hazards.</label>
+                <select required name="environmental-q8" id="environmental-q8">
+                    <option value="">Select an Option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Agree</option>
+                    <option value="4">Strongly Agree</option>
+                </select>
+            </section>
+
+            <div id="form__buttons">
+                <a href="" id="cancel-circle-form" class="form__button">Cancel</a>
+                <input type="submit" name="Submit" id="submit-circle-form" class="form__button" value="Submit Changes">
+            </div>
+        </form>
+    </div>
+    <div class="form" id="plan__form">
+        <h2>Update My Recovery Plan</h2>
+        <form action="/dashboard/plan" method="post">
+            <label for="goals">My goals for the recovery process:</label>
+            <textarea name="goals" id="goals"></textarea>
+            <label for="motivation">What motivates me to accomplish these goals? I will focus on these as a way
+                to motivate myself to continue on my recovery journey.</label>
+            <textarea name="motivation" id="motivation"></textarea>
+            <label for="challenges">What challenges will I likely encounter
+                while working toward these goals?</label>
+            <textarea name="challenges" id="challenges"></textarea>
+            <label for="consequencesOfAccomplishing">Consequences of accomplishing these goals?</label>
+            <textarea name="consequencesOfAccomplishing" id="consequencesOfAccomplishing"></textarea>
+            <label for="consequencesOfNotAccomplishing">Consequences of <b>NOT</b> accomplishing goals?</label>
+            <textarea name="consequencesOfNotAccomplishing" id="consequencesOfNotAccomplishing"></textarea>
+            <label for="values">What values are my recovery goals built on?</label>
+            <textarea name="values" id="values"></textarea>
+            <a href="" id="cancel-plan-form" class="form__button">Cancel</a>
+            <input type="submit" name="Submit" id="submit-plan-form" class="form__button" value="Submit Changes">
+        </form>
+    </div>
+</aside>
+
+<script src="/scripts/forms.js"></script>
