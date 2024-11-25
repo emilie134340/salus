@@ -5,21 +5,20 @@ const validateUser = async (req, res, next) => {
   try {
     // Check if the user is authenticated
     console.log("validating");
-    console.log(JSON.stringify(req.oidc));
+    console.log(JSON.stringify(req.oidc.user));
 
     if (!req.oidc.isAuthenticated()) {
-      return res.status(401).json({ message: 'Please log in to access this resource' });
+      res.status(401).json({ message: 'Please log in to access this resource' });
     }
 
-    // Extract user ID from the Auth0 `sub` field in the JWT
-    const userId = req.oidc.user.sub;
-    console.log(userID);
+    const userId = JSON.stringify(req.oidc.user.sub);
+    console.log(userId);
     // Check if the user exists in the database
     const user = await User.findById(userId);
     console.log(user);
     if (!user) {
       // Redirect to create user page if no account exists
-      return res.redirect('/login');
+      res.redirect('/login');
     }
 
     // Proceed to the next middleware/route if user exists

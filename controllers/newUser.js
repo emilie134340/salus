@@ -2,7 +2,7 @@ const User = require('../models/user');
 
 const createNewUser = async (req, res) => {
   try {
-    const { sub, given_name } = req.oidc.user; // Extract Auth0 user info
+    const { sub, name } = req.oidc.user; // Extract Auth0 user info
 
     // Check if user already exists in DB
     const existingUser = await User.findById(sub);
@@ -15,7 +15,7 @@ const createNewUser = async (req, res) => {
     // Create new user if doesn't exist
     const newUser = await User.create({
       _id: sub,
-      firstName: given_name,
+      firstName: name,
     });
 
     console.log(newUser);
