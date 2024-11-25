@@ -9,6 +9,7 @@ const mongodb = require('./database/index'); // connect to mongo
 const bodyParser = require('body-parser'); // for json
 const connectDB = require('./database/db')
 
+app.use(static); // Use static routes
 app.set('view engine', 'ejs'); // Set view engine to ejs
 app.use(expressLayout); // Use express layouts
 app.set('layout', './layouts/layout'); // Set layout to layout.ejs
